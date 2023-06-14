@@ -6,7 +6,7 @@
     create: true
   loop:
   - "{{depend}}"
-  - "{{roles}}"
+  - "{{role_folder}}"
 
 - name: Git checkout
   ansible.builtin.git:

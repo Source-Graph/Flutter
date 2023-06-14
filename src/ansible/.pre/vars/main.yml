@@ -1,7 +1,7 @@
 depend: ".depends"
 depend_dir: "{{role_path}}/{{depend}}"
-role_index: ".roles"
-role_dir: "{{role_path}}/{{role_index}}"
+role_folder: ".roles"
+role_dir: "{{role_path}}/{{role_folder}}"
 
 repo: [
   { subdir: "{{depend_dir}}", repo: "git@github.com:Source-Graph/AndroidStudio.git", name: "AndroidStudio"},
