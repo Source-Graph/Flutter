@@ -26,3 +26,5 @@
     dest: "{{role_dir}}/{{item.name}}"
     state: link
   loop: "{{role}}"
+
+- include_tasks: build ansible.cfg.yml

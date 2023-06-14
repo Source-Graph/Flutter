@@ -1,0 +1,16 @@
+- name: gitignore ansible.cfg
+  ansible.builtin.lineinfile:
+    path: "{{role_path}}/.gitignore"
+    regexp: "^ansible.cfg"
+    line: "ansible.cfg"
+    create: true
+
+- name: Insert/Update "Match User" configuration block in /etc/ssh/sshd_config
+  ansible.builtin.blockinfile:
+    path: "{{role_path}}/ansible.cfg"
+    block: |
+      Match User ansible-agent
+      PasswordAuthentication no
+      [defaults]
+      inventory = {{dynamic_inventory}}
+      roles_path = {{role_dir}}
