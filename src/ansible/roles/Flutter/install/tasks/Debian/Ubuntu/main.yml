@@ -1,8 +1,15 @@
 ---
-- name: Install 
+- name: linux dependencies
   ansible.builtin.apt:
     pkg:
-    - htop
+    - clang
+    - cmake
+    - ninja-build
+    - pkg-config
+    - libgtk-3-dev
+    - liblzma-dev
   become: true
 
 - include_tasks: "common/{{ubuntu_default}}/main.yml"
+
+- include_tasks: "common/sign licenses/main.yml"
