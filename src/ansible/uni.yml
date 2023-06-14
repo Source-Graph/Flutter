@@ -4,12 +4,12 @@
   - .pre
 
 
-- hosts: localhost
-  vars:
-    editor: android studio
-    # Host_vars
-    ansible_become_password: u
-    ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
+# - hosts: localhost
+#   vars:
+#     editor: android studio
+#     # Host_vars
+#     ansible_become_password: u
+#     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
 
-  roles:
-  - Flutter
+#   roles:
+#   - Flutter
