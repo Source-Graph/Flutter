@@ -1,12 +1,12 @@
 depend: ".depends"
-depend_dir: "{{role_path}}/{{depend}}/"
-role: ".roles"
-role_dir: "{{role_path}}/{{role}}"
+depend_dir: "{{role_path}}/{{depend}}"
+role_index: ".roles"
+role_dir: "{{role_path}}/{{role_index}}"
 
 repo: [
   { subdir: "{{depend_dir}}", repo: "git@github.com:Source-Graph/AndroidStudio.git", name: "AndroidStudio"},
   ]
 
-roles: [
+role: [
   { name: "AndroidStudio", path: "src/ansible/roles/AndroidStudio"},
   ]
