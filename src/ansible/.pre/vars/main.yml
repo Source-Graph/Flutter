@@ -1,5 +1,5 @@
 # Inventory
-static_inventory: ".this/inventory/test/hosts"
+static_inventory: ".pre/inventory/test/hosts"
 
 # Names
 depends: ".depends"
