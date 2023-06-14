@@ -12,4 +12,5 @@
 
 - include_tasks: "common/{{ubuntu_default}}/main.yml"
 
+# Do: automate this with Python!
 - include_tasks: "common/sign licenses/main.yml"
