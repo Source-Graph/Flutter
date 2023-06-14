@@ -1,4 +1,5 @@
 ---
 dependencies:
+- Android SDK
 - Flutter/install
 - Flutter/editor
