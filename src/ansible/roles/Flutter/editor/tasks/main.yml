@@ -1,0 +1,5 @@
+
+- name: Conditional role
+  ansible.builtin.include_role:
+    name: .pre/.roles/AndroidStudio
+  when: editor == 'android studio'

@@ -12,5 +12,9 @@
     update: false
   loop: "{{repo}}"
 
-- debug:
-    msg: "{{role_path}}, {{playbook_dir}}"
+- name: Link dependency roles
+  ansible.builtin.file:
+    src: "{{item.path}}"
+    dest: "{{role_path}}/.roles/{{item.name}}"
+    state: link
+  loop: "{{roles}}"
