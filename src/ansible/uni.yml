@@ -1,0 +1,15 @@
+---
+- hosts: localhost #, fedora, ubuntu
+  roles:
+  - .pre
+
+
+# init is not needed if you're only running on localhost!
+# - hosts: localhost #, fedora, ubuntu
+#   vars:
+#     # Host_vars
+#     ansible_become_password: u
+#     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
+
+#   roles:
+#   - Flutter

@@ -1,0 +1,15 @@
+- name: gitignore dependencies
+  ansible.builtin.lineinfile:
+    path: "{{role_path}}/.gitignore"
+    regexp: "^{{depend}}"
+    line: "{{depend}}"
+
+- name: Git checkout
+  ansible.builtin.git:
+    repo: "{{item.repo}}"
+    dest: "{{item.subdir}}{{item.name}}"
+  loop: "{{repo}}"
+  when: false
+
+- debug:
+    msg: "{{role_path}}, {{playbook_dir}}"

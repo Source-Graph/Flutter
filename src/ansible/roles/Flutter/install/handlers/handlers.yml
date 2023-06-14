@@ -1,0 +1,4 @@
+- name: initialize Flutter Snap
+  ansible.builtin.shell: flutter sdk-path
+  args:
+    creates: /home/me/snap/flutter/common/flutter/version
