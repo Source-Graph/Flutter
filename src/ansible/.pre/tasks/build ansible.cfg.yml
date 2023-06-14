@@ -5,12 +5,19 @@
     line: "ansible.cfg"
     create: true
 
-- name: Insert/Update "Match User" configuration block in /etc/ssh/sshd_config
+- name: build ansible.cfg
   ansible.builtin.blockinfile:
     path: "{{role_path}}/ansible.cfg"
+    create: true
     block: |
       Match User ansible-agent
       PasswordAuthentication no
       [defaults]
       inventory = {{dynamic_inventory}}
       roles_path = {{role_dir}}
+
+- name: link ansible.cfg
+  ansible.builtin.file:
+    src: "{{role_dir}}/ansible.cfg"
+    dest: "{{playbook_dir}}/ansible.cfg"
+    state: link
