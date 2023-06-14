@@ -1,0 +1,5 @@
+- name: include .pre vars 
+  ansible.builtin.include_vars:
+    file: "{{playbook_dir}}/.pre/vars/main.yml"
+
+- include_tasks: "{{editor}}.yml"

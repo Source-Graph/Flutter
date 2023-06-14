@@ -1,5 +1,0 @@
-
-- name: Conditional role
-  ansible.builtin.include_role:
-    name: "{{role_dir}}/AndroidStudio"
-  when: editor == 'android studio'

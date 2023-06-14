@@ -1,0 +1,7 @@
+- name: install Android Studio
+  ansible.builtin.include_role:
+    name: "AndroidStudio"
+
+- name: install Flutter plugin for Android Studio
+  debug:
+    msg: "Todo ASAP!"

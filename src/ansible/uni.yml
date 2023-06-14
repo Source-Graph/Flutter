@@ -3,7 +3,6 @@
   roles:
   - .pre
 
-
 - hosts: localhost
   vars:
     editor: android studio
@@ -13,3 +12,4 @@
 
   roles:
   - Flutter
+  - editor plugin
