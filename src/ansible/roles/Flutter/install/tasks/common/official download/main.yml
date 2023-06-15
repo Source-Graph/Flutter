@@ -1,0 +1,31 @@
+# https://developer.android.com/studio
+
+- debug:
+    msg: "TODO Asap!!!!@@@@"
+
+# - name: create dirs
+#   ansible.builtin.file:
+#     path: "{{item}}"
+#     state: directory
+#   loop:
+#   - "{{local_mirror}}"
+
+# - name: get Official Download
+#   ansible.builtin.get_url:
+#     url: "{{download_url}}"
+#     dest: "{{local_mirror}}/{{file_name}}"
+#     force: false # is not working!
+#   when: not (local_mirror + '/' + file_name) is exists # Workaround https://github.com/ansible/ansible/issues/64016#issuecomment-786931909
+
+# - name: extract ava/android-studio
+#   ansible.builtin.unarchive:
+#     src: "{{local_mirror}}/{{file_name}}"
+#     dest: "{{ava_dir}}/"
+#     creates: "{{installed_dir}}"
+
+
+# - name: create application Desktop entry
+#   ansible.builtin.copy:
+#     src: jetbrains-studio.desktop
+#     dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.local/share/applications/"
+#     mode: '0600'

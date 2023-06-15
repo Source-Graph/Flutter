@@ -1,1 +1,2 @@
-ubuntu_default: snap
+# ubuntu_default: snap
+ubuntu_default: official download
