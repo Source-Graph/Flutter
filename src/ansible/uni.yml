@@ -5,6 +5,7 @@
 
 - hosts: localhost
   vars:
+    debug: true
     editor: android studio
     # Host_vars
     ansible_become_password: u
@@ -12,4 +13,5 @@
 
   roles:
   - Flutter
-  - editor plugin
+  - flutter doctor
+  # - editor plugin

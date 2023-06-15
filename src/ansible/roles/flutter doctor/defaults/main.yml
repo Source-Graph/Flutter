@@ -1,0 +1,3 @@
+debug: false
+
+output: "{{lookup('ansible.builtin.env', 'HOME')}}/Android"
