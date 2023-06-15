@@ -1,10 +1,12 @@
-- name: run test
-  ansible.builtin.shell: flutter doctor >> flutter.test
-  args:
-    chdir: "{{output}}"
-    creates: flutter.test
+- name: run `flutter doctor` to Debug problems
+  block:
+  - name: run test
+    ansible.builtin.shell: flutter doctor >> flutter.test
+    args:
+      chdir: "{{output}}"
+      creates: flutter.test
 
 
-- name: view
-  ansible.builtin.shell: "xdg-open {{output}}/flutter.test"
+  - name: view
+    ansible.builtin.shell: "xdg-open {{output}}/flutter.test"
   when: debug
