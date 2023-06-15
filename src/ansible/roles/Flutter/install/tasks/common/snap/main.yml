@@ -1,4 +1,6 @@
-- name: install Flutter Snap
+# https://docs.flutter.dev/get-started/install/linux#get-sdk
+
+- name: Install Flutter using snapd
   community.general.snap:
     name:
       - flutter

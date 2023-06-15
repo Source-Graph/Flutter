@@ -1,0 +1,11 @@
+# Uni.os
+common: ['snap', 'official download']
+local_mirror: "{{ lookup('ansible.builtin.env', 'HOME') }}/.uni/mirror"
+
+# Official Download
+download_url: "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.2.1.20/android-studio-2022.2.1.20-linux.tar.gz"
+file_name: "android-studio-2022.2.1.20-linux.tar.gz"
+
+# Install to
+ava_dir: "{{ lookup('ansible.builtin.env', 'HOME') }}/.uni/ava"
+installed_dir: "{{ ava_dir }}/android-studio"

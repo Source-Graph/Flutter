@@ -1,3 +1,14 @@
+# https://docs.flutter.dev/get-started/install/linux#system-requirements
+- name: system requirements
+  ansible.builtin.apt:
+    pkg:
+    - curl
+    - file
+    - git
+    - xz-utils
+    - libglu1-mesa
+  become: true
+
 # https://docs.flutter.dev/get-started/install/linux#additional-linux-requirements
 - name: linux dependencies
   ansible.builtin.apt:
