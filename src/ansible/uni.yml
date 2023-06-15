@@ -3,15 +3,15 @@
   roles:
   - .pre
 
-- hosts: localhost
-  vars:
-    debug: true
-    editor: android studio
-    # Host_vars
-    ansible_become_password: u
-    ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
+# - hosts: localhost
+#   vars:
+#     debug: true
+#     editor: android studio
+#     # Host_vars
+#     ansible_become_password: u
+#     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
 
-  roles:
-  - Flutter
-  - flutter doctor
+#   roles:
+#   - Flutter
+#   - flutter doctor
   # - editor plugin
