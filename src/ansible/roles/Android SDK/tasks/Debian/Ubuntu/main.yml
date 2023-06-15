@@ -1,5 +1,0 @@
-- name: linux dependencies
-  ansible.builtin.apt:
-    pkg:
-    - android-sdk
-  become: true
