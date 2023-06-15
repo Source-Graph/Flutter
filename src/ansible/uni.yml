@@ -5,7 +5,7 @@
 
 - hosts: localhost
   vars:
-    debug: false
+    # debug: false
     editor: android studio
     # Host_vars
     ansible_become_password: u
