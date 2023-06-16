@@ -6,7 +6,7 @@ repo: [
 
 role: [
   { git: "AndroidStudio", name: "AndroidStudio", path: "src/ansible/roles/AndroidStudio"},
-  { git: "Uni.os.default", name: "Uni.os.default", path: "src/ansible/roles/uni"},
+  { git: "Uni.os.default", name: "uni", path: "src/ansible/roles/uni"},
   ]
 
 
