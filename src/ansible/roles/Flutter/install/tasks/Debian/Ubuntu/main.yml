@@ -22,6 +22,7 @@
   become: true
 
 - include_tasks: "common/{{ubuntu_default}}/main.yml"
+  when: ubuntu_default in common
 
 # Do: automate this with Python!
 - include_tasks: "common/sign licenses/main.yml"
